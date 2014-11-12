@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+using System.Linq.Expressions;
 using Newtonsoft.Json;
 using Zivs.OpenKey.Models;
 using Zivs.SupportUi;
@@ -22,8 +19,8 @@ namespace Zivs.OpenKey
         {
             inputParams = new InputParams();
             inputParams.A = "5";
-            inputParams.B = "17";
-            inputParams.P = "253";
+            inputParams.B = "19";
+            inputParams.P = "127";
             inputParams.U = "2";
             inputParams.Message = "Hello World";
         }
@@ -82,6 +79,11 @@ namespace Zivs.OpenKey
                     Results = new ObservableCollection<OutputParams>(deserializedResults);
                 }
             }
+        }
+        
+        protected new void OnPropertyChanged<T>(Expression<Func<T>> propertyExpression)
+        {
+            base.OnPropertyChanged(propertyExpression, () => decodingCommand.RaiseCanExecuteChanged());
         }
     }
 }
