@@ -6,9 +6,6 @@ namespace Zivs.ScriptRunner
 {
     internal class CommandLineRun : ICommandExecuter
     {
-        //private const string Zivs2 = ".\\zivs2.py";
-
-        //public ICommandParams CommandArguments { get; set; }
 
         public IExecutionResult Execute(ICommandParams commandArguments)
         {
