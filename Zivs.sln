@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zivs.SupportUi", "Zivs.SupportUi\Zivs.SupportUi.csproj", "{3BB360A4-1529-4516-B7D8-7B78B01F21B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zivs.NoiseAndSignal", "Zivs.NoiseAndSignal\Zivs.NoiseAndSignal.csproj", "{D197FC75-C474-4F80-8E54-0E74D624B605}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zivs.ScriptRunner", "Zivs.ScriptRunner\Zivs.ScriptRunner.csproj", "{63D827FA-68B1-4684-BF41-F2C436CB312A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zivs.OpenKey", "Zivs.OpenKey\Zivs.OpenKey.csproj", "{25BC3878-2134-4C0A-B070-7FAE47B7BEEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BB360A4-1529-4516-B7D8-7B78B01F21B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BB360A4-1529-4516-B7D8-7B78B01F21B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BB360A4-1529-4516-B7D8-7B78B01F21B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BB360A4-1529-4516-B7D8-7B78B01F21B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D197FC75-C474-4F80-8E54-0E74D624B605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D197FC75-C474-4F80-8E54-0E74D624B605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D197FC75-C474-4F80-8E54-0E74D624B605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D197FC75-C474-4F80-8E54-0E74D624B605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D827FA-68B1-4684-BF41-F2C436CB312A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D827FA-68B1-4684-BF41-F2C436CB312A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D827FA-68B1-4684-BF41-F2C436CB312A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D827FA-68B1-4684-BF41-F2C436CB312A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25BC3878-2134-4C0A-B070-7FAE47B7BEEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25BC3878-2134-4C0A-B070-7FAE47B7BEEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25BC3878-2134-4C0A-B070-7FAE47B7BEEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25BC3878-2134-4C0A-B070-7FAE47B7BEEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
