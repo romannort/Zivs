@@ -1,48 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Zivs.ScriptRunner;
+using Zivs.ScriptRunner.Python;
 
 namespace Zivs.NoiseAndSignal
 {
     public class DecoderModel
     {
-        private const string command = ".\\zivs1.py";
+        private const string Command = ".\\zivs1.py";
+        private readonly ExecuterFacade executer = new ExecuterFacade();
 
-        public string Decode(string encodedString)
+        private readonly ICommandParams parameters = new Python27Params()
         {
-            string result = RunCmd(command, encodedString);
+            Command = Command
+        };
 
-            return result;
-        }
-
-        private static string RunCmd(string command, string args)
+        public string Decode(string inputString)
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-
-            startInfo.FileName = "C:\\Python27\\python.exe";
-
-            startInfo.Arguments = string.Format("{0} {1}", command, args);
-            startInfo.UseShellExecute = false;
-            startInfo.RedirectStandardOutput = true;
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            startInfo.CreateNoWindow = true;
-
-            string result;
-            using (Process process = Process.Start(startInfo))
-            {
-                using (StreamReader reader = process.StandardOutput)
-                {
-                    result = reader.ReadToEnd();
-                }
-            }
-
-            return result;
-        }
-
+            parameters.Arguments = inputString;
+            executer.EnableEncoding = false;
+            IExecutionResult result = executer.Execute(parameters);
+            
+            return result.Value;
+        }        
     }
-
 }
