@@ -48,8 +48,8 @@ def generateABC(text):
 def revertJSON(json_abc):
 	abc = {}
 
-	for key in json_abc:
-		abc[str(json_abc[key])] = key
+	for pair in json_abc:
+		abc[str(pair.values()[0])] = pair.keys()[0]
 
 	return abc
 
@@ -62,7 +62,8 @@ def encodeText(text, abc):
 
 	coef = 100 * (float(len(encoded_text)) / (len(text) * 8)) 
 
-	return json.dumps({"text" : encoded_text, "abc" : json.dumps(abc), "coef" : coef})
+	abc_as_array = [{key : abc[key]} for key in abc.keys()]
+	return json.dumps({"text" : encoded_text, "abc" : abc_as_array, "coef" : coef})
 
 def decodeText(text, abc):
 	global separator
