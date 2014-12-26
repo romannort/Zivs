@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Zivs.TextEncoding
@@ -30,11 +26,3 @@ namespace Zivs.TextEncoding
 		}
 	}
 }
-
-
-//string MyDictionaryToJson(Dictionary<int, List<int>> dict)
-//{
-//	var entries = dict.Select(d =>
-//		string.Format("\"{0}\": [{1}]", d.Key, string.Join(",", d.Value)));
-//	return "{" + string.Join(",", entries) + "}";
-//}

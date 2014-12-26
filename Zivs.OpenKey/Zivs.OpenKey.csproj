@@ -38,6 +38,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Rnort.CmdRunner.Core">
+      <HintPath>..\lib\Rnort.CmdRunner.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -103,10 +106,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Zivs.ScriptRunner\Zivs.ScriptRunner.csproj">
-      <Project>{63d827fa-68b1-4684-bf41-f2c436cb312a}</Project>
-      <Name>Zivs.ScriptRunner</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Zivs.SupportUi\Zivs.SupportUi.csproj">
       <Project>{3BB360A4-1529-4516-B7D8-7B78B01F21B3}</Project>
       <Name>Zivs.SupportUi</Name>

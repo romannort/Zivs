@@ -1,5 +1,6 @@
-﻿using Zivs.ScriptRunner;
-using Zivs.ScriptRunner.Python;
+﻿using Rnort.CmdRunner.Core;
+using Rnort.CmdRunner.Core.Python;
+
 
 namespace Zivs.NoiseAndSignal
 {
