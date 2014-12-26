@@ -8,7 +8,7 @@ using Zivs.SupportUi;
 
 namespace Zivs.OpenKey
 {
-    public class MainWindowViewModel: ViewModelBase
+    public class MainWindowViewModel : ViewModelBase
     {
         private InputParams inputParams;
         private ObservableCollection<OutputParams> results;
@@ -30,13 +30,79 @@ namespace Zivs.OpenKey
             get { return inputParams; }
             set
             {
-                if (inputParams != value)
+                inputParams = value;
+            }
+        }
+
+        #region Props
+
+        public string A
+        {
+            get { return inputParams.A; }
+            set
+            {
+                if (inputParams.A != value)
                 {
-                    inputParams = value;
-                    OnPropertyChanged(() => InputParams);
+                    inputParams.A = value;
+                    OnPropertyChanged(() => A);
                 }
             }
         }
+
+        public string B
+        {
+            get { return inputParams.B; }
+            set
+            {
+                if (inputParams.B != value)
+                {
+                    inputParams.B = value;
+                    OnPropertyChanged(() => B);
+                }
+            }
+        }
+
+        public string P
+        {
+            get { return inputParams.P; }
+            set
+            {
+                if (inputParams.P != value)
+                {
+                    inputParams.P = value;
+                    OnPropertyChanged(() => P);
+                }
+            }
+        }
+
+        public string U
+        {
+            get { return inputParams.U; }
+            set
+            {
+                if (inputParams.U != value)
+                {
+                    inputParams.U = value;
+                    OnPropertyChanged(() => U);
+                }
+            }
+        }
+
+        public string Message
+        {
+            get { return inputParams.Message; }
+            set
+            {
+                if (inputParams.Message != value)
+                {
+                    inputParams.Message = value;
+                    OnPropertyChanged(() => Message);
+                }
+            }
+        }
+
+        #endregion
+
 
         public ObservableCollection<OutputParams> Results
         {
@@ -59,7 +125,7 @@ namespace Zivs.OpenKey
 
         public object CommandParameter
         {
-            get { return InputParams.ToJson(); }
+            get { return inputParams.ToJson(); }
         }
 
         private bool InputsValid(object obj)
@@ -69,7 +135,7 @@ namespace Zivs.OpenKey
 
         private void ExecuteCommand(object param)
         {
-            string result = scriptRunner.Run((string) param);
+            string result = scriptRunner.Run((string)CommandParameter);
 
             if (scriptRunner.Succeded)
             {
@@ -80,7 +146,7 @@ namespace Zivs.OpenKey
                 }
             }
         }
-        
+
         protected new void OnPropertyChanged<T>(Expression<Func<T>> propertyExpression)
         {
             base.OnPropertyChanged(propertyExpression, () => decodingCommand.RaiseCanExecuteChanged());
